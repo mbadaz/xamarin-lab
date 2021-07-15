@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Udemy_Xamarin_Course.QuotesPage.QuotesPage">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+                    Android="20,30,20,20"
+                    WinPhone="20,40,20,20"/>
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <StackLayout BindingContext="{x:Reference slider}">
+            <Button x:Name="buttonNext" HorizontalOptions="Center" Text="Next"
+                    Clicked="OnNextButtonClicked"/>
+            <Label x:Name="labelFontSize" HorizontalOptions="Start" Text="{Binding Value, StringFormat='Font is size {0}'}"
+                   FontSize ="Medium"/>
+            <Slider x:Name="slider" MaximumTrackColor="Gray" MinimumTrackColor="DarkCyan"
+                    Maximum="50" Minimum="16"/>
+            <Label x:Name="quoteLabel" FontSize="{Binding Value}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

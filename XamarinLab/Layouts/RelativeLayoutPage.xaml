@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Udemy_Xamarin_Course.Layouts.RelativeLayoutPage">
+    <RelativeLayout>
+        <BoxView x:Name="banner" BackgroundColor="#f7f7f7" 
+                     RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.3}"
+                     RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
+
+        </BoxView>
+        <StackLayout VerticalOptions="Center"  HorizontalOptions="Center"
+                     RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                      Property=Width, Factor=1}"
+                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                       Property=Y, Constant=30}">
+            <Label Text="R11.95" FontSize="60" FontAttributes="Bold"
+                       TextColor="#33353a" HorizontalOptions="Center"/>
+            <Button Text="Add R7.99 Credit" BackgroundColor="#1695a3"
+                        HeightRequest="40"
+                        FontSize="15" FontAttributes="Bold" CornerRadius="15"
+                        TextColor="White" TextTransform="None"/>
+        </StackLayout>
+
+        <StackLayout  Padding="40"
+                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, 
+                     ElementName=banner, Property=Height, Factor=1,Constant=30}">
+            <Label Text="Why pay for credit?" FontSize="15" FontAttributes="Bold"
+                       TextColor="#33353a" HorizontalTextAlignment="Center"/>
+            <Label FontSize="13" HorizontalTextAlignment="Center">
+                Because you can reach people who aren't on 
+                 SkyApp by calling mobile and landlines numbers
+                 or sending SMS, at low-cost rates.
+            </Label>
+        </StackLayout>
+    </RelativeLayout>
+</ContentPage>

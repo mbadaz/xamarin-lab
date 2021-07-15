@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XamarinLab.MarkupExtensions"
+             x:Class="Udemy_Xamarin_Course.Images.ImagesPage1" BackgroundColor="Black">
+    <AbsoluteLayout >
+        <Image x:Name="myImage" Aspect="Fill" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All"
+               Source="{local:EmbeddedImage XamarinLab.Images.background.jpg}"/>
+        <ActivityIndicator Color="White" IsRunning="{Binding Source={x:Reference myImage}, Path=IsLoading}"
+                           AbsoluteLayout.LayoutBounds="0.5, 0.5, 100, 100" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+    </AbsoluteLayout>
+</ContentPage>

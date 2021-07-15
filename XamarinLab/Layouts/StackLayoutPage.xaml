@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Udemy_Xamarin_Course.XamlEssentials.StackLayoutPage"
+             BackgroundColor="#127ac7">
+
+    <!--<ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness" iOS ="0, 20, 0, 0"/>
+    </ContentPage.Padding>
+   
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center">
+            <Label Text="Welcome to Xamarin.Forms" HorizontalTextAlignment="Center"
+                   TextColor="White" FontSize="Large" FontAttributes="Bold" />
+            <Label Text="Cross-platform apps made easy!" HorizontalTextAlignment="Center"
+                   TextColor="White" FontSize="18"/>
+            <Button Text="Login" BackgroundColor="#1dabf0" HorizontalOptions="Fill"
+                    TextColor="White" Margin="0, 12, 0, 0"/>
+            <Button Text="Register" BackgroundColor="#1dabf0" HorizontalOptions="Fill"
+                    TextColor="White" Margin="0, 12, 0, 0"/>
+        </StackLayout>
+    </ContentPage.Content>-->
+</ContentPage>
